@@ -62,10 +62,6 @@ function getAverageMark(marks){
 
 
 
-// let marks = [5, 4, 3, 5, 5, 4, 5, 3];
-// getAverageMark(marks)
-
-
 function calculateDrinkTask(){
   let name = window.personName.value;
   let dateOfBirthday = new Date(window.dateOfBirthday.value);
