@@ -1,4 +1,4 @@
-
+"use strict";
 
 function calculateQuadraticEquation(){
     let a = +window.a.value;
@@ -22,7 +22,7 @@ function getResult(a,b,c){
   x = [];
   
   if (d === 0) {
-    x1 = (- b + d^2) / (2 * a);
+    x1 = - b / (2 * a);
     x = [x1];
   } else if (d > 0) {
     x1 = (- b + d^2) / (2 * a);
@@ -53,11 +53,13 @@ function getAverageMark(marks){
     sum += marks[i];
   }
 
-  averageMark = sum / marks.length;
+  let averageMark1 = [];
 
-  console.log(averageMark);
+  averageMark1 = sum / marks.length;
+
+  console.log(averageMark1);
   
-  return averageMark;
+  return averageMark1;
 }
 
 
