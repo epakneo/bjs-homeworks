@@ -20,14 +20,15 @@ function getResult(a,b,c){
       x2;
 
   x = [];
+  x.push(x1, x2);
   
   if (d === 0) {
     x1 = - b / (2 * a);
-    x = [x1];
+    //x = [x1];
   } else if (d > 0) {
-    x1 = (- b + d^2) / (2 * a);
-    x2 = (- b - d^2) / (2 * a);
-    x = [x1, x2];
+    x1 = (- b + Math.sqrt(d)) / (2 * a);
+    x2 = (- b - Math.sqrt(d)) / (2 * a);
+    //x = [x1, x2];
   }
 
   return x;
@@ -53,13 +54,13 @@ function getAverageMark(marks){
     sum += marks[i];
   }
 
-  let averageMark1 = [];
+  let averageResult = [];
 
-  averageMark1 = sum / marks.length;
+  averageResult = sum / marks.length;
 
-  console.log(averageMark1);
+  console.log(averageResult);
   
-  return averageMark1;
+  return averageResult;
 }
 
 
