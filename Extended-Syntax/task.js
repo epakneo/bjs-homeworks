@@ -20,15 +20,15 @@ function getResult(a,b,c){
       x2;
 
   x = [];
-  x.push(x1, x2);
+  
   
   if (d === 0) {
     x1 = - b / (2 * a);
-    //x = [x1];
+    x.push(x1);
   } else if (d > 0) {
     x1 = (- b + Math.sqrt(d)) / (2 * a);
     x2 = (- b - Math.sqrt(d)) / (2 * a);
-    //x = [x1, x2];
+    x.push(x1, x2);
   }
 
   return x;
