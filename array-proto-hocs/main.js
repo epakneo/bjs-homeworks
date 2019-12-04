@@ -37,14 +37,11 @@ function memoize(fn, limit) {
 const mSum = memoize(sum, 3);
 console.log(mSum(3, 4));
 console.log(mSum(1, 3));
-console.log(mSum(1, 6, 7));
-console.log(mSum(3, 4));
-console.log(mSum(9, 5, 3));
-console.log(mSum(7, 6, 1));
-console.log(mSum(1, 6, 7));
+console.log(mSum(3, 1, 3));
+console.log(mSum(5, 4, 2));
 
-console.log(compareArrays([8, 9], [6]));
-console.log(compareArrays([8, 9, 5, 4], [8, 9, 5, 4, 8, 3, 5]));
-console.log(compareArrays([9, 2, 4, 8, 2], [9, 2, 4]));
-console.log(compareArrays([1, 2, 3], [2, 3, 1]));
-console.log(compareArrays([8, 1, 2], [8, 1, 2]));
+console.log(compareArrays([8, 9], [6])); // false, разные значения
+console.log(compareArrays([8, 9, 5, 4], [8, 9, 5, 4, 8, 3, 5])); // false, разные значения
+console.log(compareArrays([9, 2, 4, 8, 2], [9, 2, 4])); // false, разные значения
+console.log(compareArrays([1, 2, 3], [2, 3, 1])); // false, разные индексы, хотя и одинаковые значения
+console.log(compareArrays([8, 1, 2], [8, 1, 2])); // true
