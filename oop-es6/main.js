@@ -8,18 +8,25 @@ class Weapon {
     this.attack = attack;
     this.durability = durability;
     this.range = range;
+    this.durabilityBase = durability;
   }
 
+  // takeDamage(damage) {
+  //   if (damage > this.durability) {
+  //     console.log(0);
+  //   } else {
+  //     console.log(this.durability - damage);
+  //   }
+  // }
   takeDamage(damage) {
-    if (damage > this.durability) {
-      console.log(0);
+    if (damage <= this.durability) {
+      this.durability - damage;
     } else {
-      console.log(this.durability - damage);
+      this.durability === 0;
     }
   }
-
   getDamage() {
-    if (this.durability >= (this.durability / 100 * 30)) {
+    if (this.durability >= (this.durabilityBase / 100 * 30)) {
       return this.attack;
     } else {
       return this.attack / 2;
