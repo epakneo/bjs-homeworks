@@ -23,11 +23,13 @@ function memoize(fn, limit) {
     if (search) {
      return `Результат ${search.result} из памяти.`;
     }
-      results.unshift({args: args1, result: fn(...args1)});
+  
+    results.unshift({args: args1, result: fn(...args1)});
 
     if (results.length > limit) {
       results.splice(limit);
     }
+    
     return results[0].result;
   }
 }
